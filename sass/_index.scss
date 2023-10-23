@@ -1,0 +1,35 @@
+@use 'variables';
+@use 'mixinsfunc';
+@use 'modal';
+
+
+.container-index {
+    background-image: url("../images/fondo.jpg");
+    background-size: cover;
+}
+
+.contenido-index {
+    position: relative;
+    text-align: center;
+    
+    &__container{
+        width: 100%;
+        height: 60vh;
+        @include mixinsfunc.crear-flexbox(row,center, center);
+    }
+
+    &__boton{
+        @include variables.botonNaranja;
+        padding-block: 1.5%;
+        padding-inline: 3%;
+        font-size: 1.5vw;        
+    }
+    
+}
+
+
+
+
+
+
+    

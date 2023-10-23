@@ -1,0 +1,17 @@
+@mixin botonNaranja {
+    background-color: rgb(241, 98, 2);
+    border: 0;
+    border-radius: 25px;
+    font-size: 0.8vw;
+    color: white; 
+
+    &:hover{
+        background-color: rgb(241, 70, 2);
+    }
+}
+
+@mixin btn-form{
+    color: white;
+    text-align: center;
+    font-size: 1.5vw;
+}

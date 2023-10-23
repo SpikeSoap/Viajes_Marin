@@ -1,0 +1,132 @@
+@use 'mixinsfunc';
+@use 'variables';
+
+.container__modal {
+    width: 100vw;
+    height: 100vh;
+    @include mixinsfunc.posicion-fixed(0%, 0%);
+    background-color: rgba(153, 153, 153, 0.747);
+    pointer-events: none;
+}
+
+.show{
+    pointer-events: auto;
+}
+
+.modal {
+    width: 35%;
+    height: 100vh;
+    border-radius: 25px;
+    @include mixinsfunc.posicion-fixed(0%, 0%);
+    flex-flow: column;
+    @include mixinsfunc.posicion-fixed(0.5%, 30%);
+    background-color: rgba(0, 128, 58, 0.747);
+
+    &-encabezado {
+        height: 20vh;
+        width: 35vw;
+        display: flex;
+        justify-content: space-around;
+        @include mixinsfunc.crear-flexbox(row, right, center);
+        gap: 20%;
+
+        &__figure {
+            width: 30%;
+        }
+
+        &__logo {
+            width: 110%;
+        }
+
+        &__button {
+            width: 5vw;
+            height: 5vh;
+            background-color: transparent;
+            border: 0;
+            padding-inline-end: 15%;
+        }
+
+        &__close {
+            width: 2vw;
+        }
+    }
+}
+
+
+
+.form-modal {
+    height: 60vh;
+    width: 100%;
+    @include mixinsfunc.crear-flexbox(column, none, center);
+
+    gap: 5%;
+
+
+    &__title {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    &__container {
+        width: 75%;
+        height: 100%;
+        @include mixinsfunc.crear-flexbox(column, left, none);
+        gap: 5%;
+    }
+
+    &__item {
+        font-size: 1.5vw;
+    }
+
+    &__input {
+        min-height: 5vh;
+        border-radius: 15px;
+        border: none;
+    }
+
+    &__olvido {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    &__inicioS {
+        @include variables.btn-form;
+        background-color: red;
+    }
+
+    &__o {
+        text-align: center;
+    }
+
+    &__google {
+        @include mixinsfunc.crear-flexbox(row, center, center);
+        gap: 5%;
+        text-align: center;
+        color: black;
+        background-color: white;
+    }
+
+    &__logo-google {
+        width: 10%;
+    }
+
+    &__registrar {
+        @include variables.btn-form;
+        background-color: blue;
+
+    }
+
+    &__letra-peq {
+        text-align: center;
+    }
+
+    &__politicas {
+        font-weight: 900;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

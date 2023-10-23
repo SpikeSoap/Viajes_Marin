@@ -1,0 +1,81 @@
+@use 'variables';
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.encabezado {
+    width: 100%;
+    height: 10vh;
+    display: inline-flex;
+    justify-content: space-between;
+
+    &__container {
+        width: 15%;
+    }
+
+    &__logo {
+        width: 100%;
+    }
+}
+
+.navegador {
+    width: 85%;
+    height: 10vh;
+
+    &__list {
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 5%;
+        padding-inline-end: 6%;
+        padding-block-start: 1%;
+    }
+
+    &__item {
+        list-style: none;
+        text-decoration: none;
+
+    }
+
+    &__menu {
+        width: 100%;
+        font-size: 1em;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+    }
+    
+}
+
+.menu__sub {
+    position: relative;
+    margin: auto;
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: #ffffff;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -4px;
+        transition: 0.3s;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+}
+
+.boton-menu{
+    width: 120%;
+    height: 5vh;
+
+    @include variables.botonNaranja;
+}

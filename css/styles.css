@@ -1,0 +1,245 @@
+@charset "UTF-8";
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.encabezado {
+  width: 100%;
+  height: 10vh;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.encabezado__container {
+  width: 15%;
+}
+.encabezado__logo {
+  width: 100%;
+}
+
+.navegador {
+  width: 85%;
+  height: 10vh;
+}
+.navegador__list {
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 5%;
+  padding-inline-end: 6%;
+  padding-block-start: 1%;
+}
+.navegador__item {
+  list-style: none;
+  text-decoration: none;
+}
+.navegador__menu {
+  width: 100%;
+  font-size: 1em;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.menu__sub {
+  position: relative;
+  margin: auto;
+}
+.menu__sub:after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+.menu__sub:hover:after {
+  width: 100%;
+}
+
+.boton-menu {
+  width: 120%;
+  height: 5vh;
+  background-color: rgb(241, 98, 2);
+  border: 0;
+  border-radius: 25px;
+  font-size: 0.8vw;
+  color: white;
+}
+.boton-menu:hover {
+  background-color: rgb(241, 70, 2);
+}
+
+.container__modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(153, 153, 153, 0.747);
+  pointer-events: none;
+}
+
+.show {
+  pointer-events: auto;
+}
+
+.modal {
+  width: 35%;
+  height: 100vh;
+  border-radius: 25px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  flex-flow: column;
+  position: fixed;
+  top: 0.5%;
+  left: 30%;
+  background-color: rgba(0, 128, 58, 0.747);
+}
+.modal-encabezado {
+  height: 20vh;
+  width: 35vw;
+  display: flex;
+  justify-content: space-around;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: right;
+  gap: 20%;
+}
+.modal-encabezado__figure {
+  width: 30%;
+}
+.modal-encabezado__logo {
+  width: 110%;
+}
+.modal-encabezado__button {
+  width: 5vw;
+  height: 5vh;
+  background-color: transparent;
+  border: 0;
+  padding-inline-end: 15%;
+}
+.modal-encabezado__close {
+  width: 2vw;
+}
+
+.form-modal {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: none;
+  gap: 5%;
+}
+.form-modal__title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.form-modal__container {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: none;
+  justify-content: left;
+  gap: 5%;
+}
+.form-modal__item {
+  font-size: 1.5vw;
+}
+.form-modal__input {
+  min-height: 5vh;
+  border-radius: 15px;
+  border: none;
+}
+.form-modal__olvido {
+  text-align: center;
+  text-decoration: underline;
+}
+.form-modal__inicioS {
+  color: white;
+  text-align: center;
+  font-size: 1.5vw;
+  background-color: red;
+}
+.form-modal__o {
+  text-align: center;
+}
+.form-modal__google {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+.form-modal__logo-google {
+  width: 10%;
+}
+.form-modal__registrar {
+  color: white;
+  text-align: center;
+  font-size: 1.5vw;
+  background-color: blue;
+}
+.form-modal__letra-peq {
+  text-align: center;
+}
+.form-modal__politicas {
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+}
+.form-modal__politicas:hover {
+  text-decoration: underline;
+}
+
+.container-index {
+  background-image: url("../images/fondo.jpg");
+  background-size: cover;
+}
+
+.contenido-index {
+  position: relative;
+  text-align: center;
+}
+.contenido-index__container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+.contenido-index__boton {
+  background-color: rgb(241, 98, 2);
+  border: 0;
+  border-radius: 25px;
+  font-size: 0.8vw;
+  color: white;
+  padding-block: 1.5%;
+  padding-inline: 3%;
+  font-size: 1.5vw;
+}
+.contenido-index__boton:hover {
+  background-color: rgb(241, 70, 2);
+}
+
+/*INICIO contenido genérico*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

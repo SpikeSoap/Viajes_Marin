@@ -1,0 +1,13 @@
+@mixin crear-flexbox($flex-flow,$justify, $align) {
+    display: flex;
+    flex-flow: $flex-flow;
+    align-items: $align;
+    justify-content: $justify;
+};
+
+
+@mixin posicion-fixed($top, $left) {
+    position: fixed;
+    top: $top;
+    left: $left;
+};
