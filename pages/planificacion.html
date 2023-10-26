@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Marín</title>
+
+
+    <!--LINKS-->
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+    <div class="container container-planificacion">
+        <header class="encabezado-planificacion">
+            <div class="encabezado">
+                <figure class="encabezado__container">
+                    <img class="encabezado__logo" src="../images/logo.png" alt="Logo">
+                </figure>
+                <nav class="navegador">
+                    <ul class="navegador__list">
+                        <li class="navegador__item">
+                            <a class="navegador__menu menu__sub" href="html/pendiente.html">Ofertas</a>
+                        </li>
+                        <li class="navegador__item">
+                            <a class="navegador__menu menu__sub" href="html/pendiente.html">Viajes temáticos</a>
+                        </li>
+                        <li class="navegador__item">
+                            <a class="navegador__menu menu__sub" href="html/pendiente.html">Para grupos</a>
+                        </li>
+                        <li class="navegador__item">
+                            <a class="navegador__menu menu__sub" href="html/pendiente.html">Contacto</a>
+                        </li>
+                        <li class="navegador__item">
+                            <button class="navegador__menu boton-menu">Iniciar sesión</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="encabezado-buscador">
+                <h2 class="encabezado-buscador__title">Elige tu destino</h2>
+                <form class="encabezado-buscador__formulario" action="#" method="post">
+                    <div class="encabezado-buscador__contenedor">
+                        <label for="" class="encabezado-buscador__desc">Destino</label>
+                        <input type="text" class="encabezado-buscador__input encabezado-buscador__input-dest">
+                    </div>
+                    <div class="encabezado-buscador__contenedor">
+                        <label for="" class="encabezado-buscador__desc">Fecha desde</label>
+                        <input type="date" class="encabezado-buscador__input encabezado-buscador__input-fechD">
+                    </div>
+                    <div class="encabezado-buscador__contenedor">
+                        <label for="" class="encabezado-buscador__desc">Fecha hasta</label>
+                        <input type="date" class="encabezado-buscador__input encabezado-buscador__input-fechH">
+                    </div>
+                    <div class="encabezado-buscador__contenedor">
+                        <label for="" class="encabezado-buscador__desc">Adultos</label>
+                        <input type="number" class="encabezado-buscador__input encabezado-buscador__input-adult">
+                    </div>
+                    <div class="encabezado-buscador__contenedor">
+                        <label for="" class="encabezado-buscador__desc">Niños</label>
+                        <input type="number" class="encabezado-buscador__input encabezado-buscador__input-kid">
+                    </div>
+                    <div class="encabezado-buscador__btn">
+                        <!-- <label for="" class="encabezado-buscador__desc encabezado-buscador__lBusc">Buscar</label> -->
+                        <input type="button" class="encabezado-buscador__input encabezado-buscador__buscar" value="Buscar">
+                    </div>
+                </form>
+            </div>
+            <div class="encabezado-arrow">
+                <input type="image" class="encabezado-arrow__img encabezado-arrow__left" src="../images/arrow-left.png">
+                <input type="image" class="encabezado-arrow__img encabezado-arrow__right" src="../images/arrow-right.png">
+            </div>
+        </header>
+        <main class="principal-planificacion">
+            <h2 class="principal-planificacion__title">Explora entre diferentes ambientes</h2>
+            <article class="principal-planificacion__conteiner">
+                <figure class="principal-planificacion__img principal-planificacion__img-japon">
+                    <h3 class="principal-planificacion__desc">Kyoto, Japón </h3>
+                </figure>
+                <figure class="pr2 principal-planificacion__img principal-planificacion__img-alemania">
+                    <h3 class="principal-planificacion__desc">Selva Negra, Alemania </h3>
+                </figure>
+                <figure class="pr3 principal-planificacion__img principal-planificacion__img-argentina">
+                    <h3 class="principal-planificacion__desc">Patagonia, Argentina </h3>
+                </figure>
+                <figure class="pr4 principal-planificacion__img principal-planificacion__img-congo">
+                    <h3 class="principal-planificacion__desc">Lisala, Rep. Dem. del Congo </h3>
+                </figure>
+            </article>
+        </main>
+    </div>
+    
+    <script src="../scripts/planificacion.js"></script>
+    <script type="module" src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/modal.js"></script>
+    
+</body>
+
+</html>

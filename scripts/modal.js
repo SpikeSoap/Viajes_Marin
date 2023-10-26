@@ -1,5 +1,5 @@
 export function crearModal() {
-    const contIndex = document.querySelector(".container-index");
+    const contIndex = document.querySelector(".container");
 
     const modalCont = document.createElement("div");
     modalCont.className = "container__modal";

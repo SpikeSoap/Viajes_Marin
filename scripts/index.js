@@ -1,24 +1,26 @@
-import {crearModal} from "./modal.js";
+import { crearModal } from "./modal.js";
 
 /* Constantes */
 const btnIniciar = document.querySelector(".contenido-index__boton");
 const btnMenu = document.querySelector(".boton-menu");
+const logo = document.querySelector(".encabezado__logo");
 
-
-btnIniciar.addEventListener('click', () => {
-    location.href = "../pages/planificacion.html";
-});
+if (btnIniciar) {
+    btnIniciar.addEventListener('click', () => {
+        
+        window.location.href = "../pages/planificacion.html";
+    });
+}
 
 btnMenu.addEventListener('click', () => {
     crearModal();
 
-   //funcionalidades
+    //funcionalidades
     btnClose();
     botonLogin();
     botonGoogle();
 
 });
-
 
 
 function btnClose() {
@@ -34,7 +36,7 @@ function btnClose() {
 }
 
 
-function botonLogin(){
+function botonLogin() {
 
     //TODO: hacer el apartado de registrarse
 }
@@ -48,3 +50,7 @@ function botonGoogle() {
         });
     }
 }
+
+logo.addEventListener('click', ()=>{
+    location.href="../index.html";
+});

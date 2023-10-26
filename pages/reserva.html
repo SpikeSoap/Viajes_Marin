@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Marín</title>
+
+    <!--LINKS-->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="container container-reserva">
+        <header class="encabezado-reserva">
+            <div class="encabezado">
+                <figure class="encabezado__container">
+                    <img class="encabezado__logo" src="../images/logo.png" alt="Logo">
+                </figure>
+                <nav class="navegador">
+                    <ul class="navegador__list">
+                        <li class="navegador__item">
+                            <a class="navegador__menu menu__sub" href="html/pendiente.html">Ofertas</a>
+                        </li>
+                        <li class="navegador__item">
+                            <a class="navegador__menu menu__sub" href="html/pendiente.html">Viajes temáticos</a>
+                        </li>
+                        <li class="navegador__item">
+                            <a class="navegador__menu menu__sub" href="html/pendiente.html">Para grupos</a>
+                        </li>
+                        <li class="navegador__item">
+                            <a class="navegador__menu menu__sub" href="html/pendiente.html">Contacto</a>
+                        </li>
+                        <li class="navegador__item">
+                            <button class="navegador__menu boton-menu">Iniciar sesión</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="principal-reserva">
+            <h2 class="principal-reserva__title">Información personal a viajeros</h2>
+            <section class="principal-reserva__conteiner">
+                <article class="reserva-izquierda">
+                    <div class="reserva-izquierda__conteiner">
+                        <form action="pendiente.html">
+                            <div class="reserva-izquierda__formulario">
+                                <div class="reserva-izquierda__section">
+                                    <div class="reserva-izquierda__datos">
+                                        <label for="">Nombre: </label>
+                                        <input type="text" id="nombre" class="reserva-izquierda__informacion">
+                                    </div>
+                                    <br>
+                                    <div class="reserva-izquierda__datos">
+                                        <label for="" class="reserva-izquierda__etiqueta">Título: </label>
+                                        <input type="radio" value="Sr" id="sr">
+                                        <label for="nSr" class="rad-info">Sr.</label>
+                                        <input type="radio" value="Sra" id="sra">
+                                        <label for="nSra" class="rad-info">Sra.</label>
+                                        <input type="radio" value="Sre" id="sre">
+                                        <label for="nSre" class="rad-info">Sre.</label>
+                                    </div>
+                                    <br>
+                                    <div class="reserva-izquierda__datos">
+                                        <label for="">Correo electrónico:</label>
+                                        <input type="email" id="correo" class="reserva-izquierda__informacion">
+                                    </div>
+                                </div>
+                                <div class="reserva-izquierda__section">
+                                    <div class="reserva-izquierda__datos">
+                                        <label for="" class="reserva-izquierda__apellido">Apellidos: </label>
+                                        <input type="text" id="apellidos" class="reserva-izquierda__informacion">
+                                    </div>
+                                    <br>
+                                    <div class="reserva-izquierda__datos">
+                                        <label for="">Tel. Móvil:</label>
+                                        <input type="number" id="tlfn" class="reserva-izquierda__informacion">
+                                    </div>
+                                    <br>
+                                    <div class="reserva-izquierda__datos">
+                                        <label for="">Confirma tu correo: </label>
+                                        <input type="email" id="email" class="reserva-izquierda__informacion">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reserva-izquierda__nacimiento">
+                                <label for="">Fecha de nacimiento: </label>
+                                <input type="date" id="fcumple" class="reserva-izquierda__informacion">
+                            </div>
+                        </form>
+                    </div>
+                </article>
+                <article class="reserva-derecha">
+                    <div class="reserva-derecha__pedido">
+                        <h2 class="reserva-derecha__subtitle">Tu pedido</h2>
+                        <div class="reserva-pedido__conteiner reserva-derecha__subtitle">
+                            <div class="reserva-derecha__informacion">
+                                <h3 class="reserva-derecha__destacado">Destino: </h3>
+                                <span class="reserva-derecha__destino"></span>
+                            </div>
+                            <div class="reserva-derecha__informacion">
+                                <h3>Fecha salida: </h3>
+                                <span class="reserva-derecha__fechaD"></span>
+                            </div>
+                            <div class="reserva-derecha__informacion">
+                                <h3>Fecha vuelta: </h3>
+                                <span class="reserva-derecha__fechaH"></span>
+                            </div>
+                            <div class="reserva-derecha__informacion">
+                                <h3>Aultos/as: </h3>
+                                <span class="reserva-derecha__adult"></span>
+                            </div>
+                            <div class="reserva-derecha__informacion">
+                                <h3>Niños/as: </h3>
+                                <span class="reserva-derecha__kid"></span>
+                            </div>
+                        </div>
+                        <div class="reserva-derecha__importe">
+                            <h2 class="reserva-derecha__destacado reserva-derecha__subtitle">Importe</h2>
+                        </div>
+                        <div class="reserva-derecha__impuesto reserva-derecha__subtitle">
+                            <div class="reserva-derecha__informacion">
+                                <h3 class="reserva-derecha__destacado">Subtotal: </h3>
+                                <span class="reserva-derecha__subtotal"></span>
+                            </div>
+                            <div class="reserva-derecha__informacion">
+                                <h3>IVA 21%: </h3>
+                                <span class="reserva-derecha__iva"></span>
+                            </div>
+                        </div>
+                        <div class="reserva-derecha__final reserva-derecha__informacion">
+                            <h3 class="reserva-derecha__destacado">Total: </h3>
+                            <span class="reserva-derecha__total"></span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="reserva-pagar">
+                <button class="reserva-pagar__boton">
+                    <span class="reserva-pagar__continuar">Continuar</span>
+                    <svg class="reserva-pagar__transition">
+                        <rect x="0" y="0" stroke-linecap="round"></rect>
+                    </svg>
+            </section>
+        </main>
+    </div>
+    <script src="../scripts/reserva.js"></script>
+    <script type="module" src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/modal.js"></script>
+</body>
+
+</html>

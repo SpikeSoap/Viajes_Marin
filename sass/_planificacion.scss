@@ -1,0 +1,174 @@
+@use 'variables';
+@use 'mixinsfunc';
+@use 'modal';
+
+
+.container-planificacion {
+    width: 100%;
+    height: auto;
+    background-color: rgb(45, 114, 45);
+    margin: 0 auto;
+    position: relative;
+    // border: 2px solid red;
+}
+
+
+.encabezado-planificacion {
+    background-image: url("../images/imgen0.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 80vh;
+    width: 100%;
+}
+
+.encabezado-buscador {
+    width: 70%;
+    height: 40vh;
+    position: absolute;
+    top: 15%;
+    left: 14%;
+    background: linear-gradient(to bottom, #3b3b3b8c, rgba(0, 0, 0, 0.822));
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px #0303038f;
+
+    &__title {
+        font-family: Verdana;
+        font-size: 30px;
+        color: rgb(67, 175, 67);
+        text-align: center;
+        margin: 3%;
+    }
+
+    &__formulario {
+        height: 25vh;
+        @include mixinsfunc.crear-flexbox(row,center, center);
+    }
+
+    &__contenedor {
+        height: 10vh;
+        @include mixinsfunc.crear-flexbox(column,center, center);
+        gap: 20%;
+        font-size: 1.2vw;
+        color: white;
+
+    }
+
+    &__input {
+        width: 100%;
+        height: 5vh;
+        border: none;
+        text-align: center;
+
+        &-dest {
+            border-radius: 15px 0px 0px 15px;
+        }
+    }
+
+    &__btn {
+        // border: 2px solid red;
+        width: 15%;
+        height: 10vh;
+        @include mixinsfunc.crear-flexbox(row,center, end);
+    }
+
+    &__buscar {
+        font-size: 1.2vw;
+        border-radius: 0px 15px 15px 0px;
+        background-color: rgb(241, 98, 2);
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.encabezado-arrow {
+    width: 100%;
+    height: 35vh;
+    @include mixinsfunc.crear-flexbox(row,space-between, center);
+
+    &__img {
+        width: 8%;
+        margin: 2%;
+    }
+}
+
+
+.principal-planificacion {
+    width: 100%;
+    height: 110vh;
+    background-color: rgb(45, 114, 45);
+    // border: 2px solid rgb(55, 0, 255);
+
+    &__title {
+        text-align: center;
+        margin-block: 3%;
+        color: #ffffff;
+        font-size: 6vh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        // border: 2px solid red;
+    }
+
+    &__conteiner {
+        width: 100%;
+        height: 80vh;
+        @include mixinsfunc.crear-flexbox(wrap, center, center);
+        gap: 5%;
+    }
+
+    &__img {
+        width: 35%;
+        height: 35vh;
+        background-size: cover;
+        background-position: top;
+
+        &-japon {
+            background-image:
+                linear-gradient(to bottom, #ffffff41, rgba(20, 20, 20, 0.842)),
+                url("../images/dest1.jpg");
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        &-alemania {
+            background-image:
+                linear-gradient(to bottom, #ffffff41, rgba(20, 20, 20, 0.842)),
+                url("../images/dest2.png");
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        &-argentina {
+            background-image:
+                linear-gradient(to bottom, #ffffff41, rgba(20, 20, 20, 0.842)),
+                url("../images/dest3.png");
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        &-congo {
+            background-image:
+                linear-gradient(to bottom, #ffffff41, rgba(20, 20, 20, 0.842)),
+                url("../images/dest4.jpg");
+            background-position: center;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+
+    &__desc {
+        height: 100%;
+        @include mixinsfunc.crear-flexbox(row, center, end);
+        font-size: 1.5vw;
+        color: white;
+        padding: 6%;
+    }
+
+}

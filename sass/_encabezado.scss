@@ -44,7 +44,7 @@
 
     &__menu {
         width: 100%;
-        font-size: 1em;
+        font-size: 1.5vw;
         text-decoration: none;
         color: #ffffff;
         font-weight: 900;
@@ -76,6 +76,5 @@
 .boton-menu{
     width: 120%;
     height: 5vh;
-
     @include variables.botonNaranja;
 }
