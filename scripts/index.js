@@ -5,20 +5,27 @@ const btnIniciar = document.querySelector(".contenido-index__boton");
 const btnMenu = document.querySelector(".boton-menu");
 const logo = document.querySelector(".encabezado__logo");
 
+
+
 if (btnIniciar) {
     btnIniciar.addEventListener('click', () => {
-        
+
         window.location.href = "../pages/planificacion.html";
     });
 }
 
+logo.addEventListener('click', () => {
+    location.href = "../index.html";
+});
+
 btnMenu.addEventListener('click', () => {
     crearModal();
 
-    //funcionalidades
+    //Funcionalidades
     btnClose();
-    botonLogin();
-    botonGoogle();
+    btnLogin();
+    btnGoogle();
+    btnRegistrar();
 
 });
 
@@ -36,21 +43,65 @@ function btnClose() {
 }
 
 
-function botonLogin() {
+function btnLogin() {
+    let correoUsu = document.querySelector(".form-modal__correo");
+    let contraUsu = document.querySelector(".form-modal__contra");
+    let btnIniSes = document.querySelector(".form-modal__inicioS");
 
-    //TODO: hacer el apartado de registrarse
+    btnIniSes.addEventListener('click', () => {
+        let correoAct = correoUsu.value;
+        let contraAct = contraUsu.value;
+        if (correoAct && contraUsu) {
+            if ((correoAct.trim().length != "") && (contraAct.trim().length != "")) {
+                let correo = localStorage.getItem('Correo');
+                let contra = localStorage.getItem('Contra');
+                console.log(correo + " " + correoAct);
+    
+                if ((correo != null) && (contra != null)) {
+                    let nombre = localStorage.getItem('Nombre');
+                    
+                    if ((correo == correoAct) && (contra == contraAct)) {
+                        btnMenu.innerHTML = nombre;
+                        btnMenu.classList.add('boton__usuario');
+
+                        localStorage.setItem('Usuario', nombre);
+                    } else {
+                        console.log("El usuario o la contraseña no coinciden");
+                    }
+                } else {
+                    alert("No hay ningún usuario introducido");
+                }
+            } else {
+                alert("Llene por favor, los campos");
+            }
+        }
+    });
 }
 
-function botonGoogle() {
+function btnGoogle() {
     let btnGoogle = document.querySelector(".form-modal__google");
     if (btnGoogle) {
         btnGoogle.addEventListener('click', () => {
-            console.log("werftghjb");
             location.href = "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2Fselect%3Fclient_id%3D694505692171-31closf3bcmlt59aeulg2j81ej68j6hk.apps.googleusercontent.com%26auto_select%3Dtrue%26ux_mode%3Dpopup%26ui_mode%3Dcard%26context%3Duse%26as%3Dfhl7Z85OZcQlkg3jSRZYiQ%26channel_id%3D25e5b337e5fb197bbd402b2e248b60f74f359a80efc3383b8cdb59ae71749d02%26origin%3Dhttps%3A%2F%2Fwww.pinterest.es&faa=1&ifkv=AVQVeyyY2x5ZTLb5dPoqjbaDEkBsdY9S3A9FGbzLmTGSAvPnANbORmimTO0vUDpjYa-1pAJpF8sgOQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1962621882%3A1697814215438098&theme=glif";
         });
     }
 }
 
-logo.addEventListener('click', ()=>{
-    location.href="../index.html";
+function btnRegistrar() {
+    let btnRegistrar = document.querySelector(".form-modal__registrar");
+
+    if (btnRegistrar) {
+        btnRegistrar.addEventListener('click', () => {
+            location.href = "../pages/registrar.html";
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    let usuario = localStorage.getItem('Usuario');
+    if (usuario != null) {
+        btnMenu.innerHTML = usuario;
+        btnMenu.classList.add('boton__usuario');
+    }
 });

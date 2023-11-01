@@ -40,14 +40,13 @@
     }
 
     &__formulario {
-        height: 13vh;
-        @include mixinsfunc.crear-flexbox(row,center, center);
-        
+        height: 10vh;
+        @include mixinsfunc.crear-flexbox(row,center, center);        
     }
 
     &__contenedor {
         width: 15%;
-        height: 10vh;
+        height: 100%;
         @include mixinsfunc.crear-flexbox(column,center, center);
         gap: 5%;
         font-size: 1.2vw;
@@ -81,6 +80,29 @@
         background-color: rgb(241, 98, 2);
         color: white;
         font-weight: 300;
+    }
+
+    &__botonera{
+        width: 100%;
+        height: 15vh;
+        
+        @include mixinsfunc.crear-flexbox(row,space-around, center);
+        color: white;   
+    }
+
+    &__btn{
+        width: 15%;
+        text-align: center;
+        border: 3px solid rgb(45, 114, 45);
+        padding-block: 1%;
+        padding-inline: 2%;
+        border-radius: 20px;
+        font-size: 1.4vw;
+    
+        &:hover{
+            border: 3px solid rgb(40, 100, 40);
+            background-color: rgb(40, 100, 40); 
+        }
     }
 }
 

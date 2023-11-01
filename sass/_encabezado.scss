@@ -1,5 +1,5 @@
 @use 'variables';
-
+@use 'mixinsfunc';
 
 .container {
     width: 100%;
@@ -10,15 +10,15 @@
 .encabezado {
     width: 100%;
     height: 10vh;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-
+    
     &__container {
         width: 15%;
     }
 
     &__logo {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -37,9 +37,9 @@
     }
 
     &__item {
+        width: auto;
         list-style: none;
         text-decoration: none;
-
     }
 
     &__menu {
@@ -50,7 +50,6 @@
         font-weight: 900;
         letter-spacing: 0.5px;
     }
-    
 }
 
 .menu__sub {
@@ -74,7 +73,13 @@
 }
 
 .boton-menu{
-    width: 120%;
+    min-width: 120%;
     height: 5vh;
     @include variables.botonNaranja;
+    text-align: center;
+}
+
+.boton__usuario{
+    @include mixinsfunc.crear-flexbox(row,center, center);
+    padding-inline: 100%;
 }

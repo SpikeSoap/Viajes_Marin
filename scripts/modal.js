@@ -10,9 +10,8 @@ export function crearModal() {
     modal.className = "modal";
     modalCont.appendChild(modal);
 
-    modalEncabezado(modal)
+    modalEncabezado(modal);
 }
-
 
 function modalEncabezado(modal) {
     const modalEnca = document.createElement("div");
@@ -61,9 +60,9 @@ function modalForm(modal) {
     formContainer.appendChild(labelCorreo);
 
     const inputCorreo = document.createElement("input");
-    inputCorreo.className = "form-modal__item form-modal__input";
+    inputCorreo.className = "form-modal__item form-modal__input form-modal__correo";
     inputCorreo.type = "email";
-    inputCorreo.required = true;
+    // inputCorreo.required = true;
     formContainer.appendChild(inputCorreo);
 
     const labelContra = document.createElement("label");
@@ -72,9 +71,9 @@ function modalForm(modal) {
     formContainer.appendChild(labelContra);
 
     const inputContra = document.createElement("input");
-    inputContra.className = "form-modal__item form-modal__input";
+    inputContra.className = "form-modal__item form-modal__input form-modal__contra";
     inputContra.type = "password";
-    inputContra.required = true;
+    // inputContra.required = true;
     formContainer.appendChild(inputContra);
 
     const olvidoContra = document.createElement("p");
@@ -84,6 +83,7 @@ function modalForm(modal) {
 
     const iniSes = document.createElement("button");
     iniSes.className = "form-modal__input form-modal__inicioS";
+    iniSes.type = "button";
     iniSes.textContent = "Iniciar sesión";
     formContainer.appendChild(iniSes);
 
@@ -95,11 +95,12 @@ function modalForm(modal) {
     const contGoogle = document.createElement("button");
     contGoogle.className = "form-modal__input form-modal__google";
     contGoogle.type = "button";
-    contGoogle.innerHTML = '<img class="form-modal__logo-google" src="../images/googleLogo.jpg">Continuar con Google';
+    contGoogle.innerHTML = '<img class="form-modal__item form-modal__logo-google" src="../images/googleLogo.jpg">Continuar con Google';
     formContainer.appendChild(contGoogle);
 
     const registrar = document.createElement("button");
-    registrar.className = "form-modal__input form-modal__registrar";
+    registrar.className = "form-modal__input form-modal__item form-modal__registrar ";
+    registrar.type = "button";
     registrar.textContent = "Registrarme"
     formContainer.appendChild(registrar);
 

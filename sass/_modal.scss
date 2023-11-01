@@ -15,15 +15,14 @@
 
 .modal {
     width: 35%;
-    height: 100vh;
+    height: 98vh;
     border-radius: 25px;
-    @include mixinsfunc.posicion-fixed(0%, 0%);
     flex-flow: column;
-    @include mixinsfunc.posicion-fixed(0.5%, 30%);
+    @include mixinsfunc.posicion-fixed(1%, 30%);
     background-color: rgba(0, 128, 58, 0.747);
 
     &-encabezado {
-        height: 20vh;
+        height: 15vh;
         width: 35vw;
         display: flex;
         justify-content: space-around;
@@ -35,7 +34,8 @@
         }
 
         &__logo {
-            width: 110%;
+            padding-block-start: 5%;
+            width: 90%;
         }
 
         &__button {
@@ -55,31 +55,31 @@
 
 
 .form-modal {
-    height: 60vh;
+    height: 83vh;
     width: 100%;
     @include mixinsfunc.crear-flexbox(column, none, center);
-
     gap: 5%;
 
-
     &__title {
+        padding-block-start: 3%;
         font-size: 25px;
         font-weight: bold;
     }
 
     &__container {
         width: 75%;
-        height: 100%;
+        height: 70vh;
         @include mixinsfunc.crear-flexbox(column, left, none);
-        gap: 5%;
+        gap: 3%;
     }
 
     &__item {
-        font-size: 1.5vw;
+        font-size: 1.2vw;
+        padding-inline-start: 2%;
     }
 
     &__input {
-        min-height: 5vh;
+        height: 6vh;
         border-radius: 15px;
         border: none;
     }
@@ -104,6 +104,7 @@
         text-align: center;
         color: black;
         background-color: white;
+        font-size: 1.1vw;
     }
 
     &__logo-google {

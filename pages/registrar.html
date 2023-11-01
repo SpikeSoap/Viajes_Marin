@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Marín</title>
+
+    <!--LINKS-->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container registrar">
+        <header class="encabezado registrar-encabezado">
+            <figure class="encabezado__container">
+                <img class="encabezado__logo" src="../images/logo.png" alt="Logo">
+            </figure>
+            <nav class="navegador">
+                <ul class="navegador__list">
+                    <li class="navegador__item">
+                        <a class="navegador__menu menu__sub" href="html/pendiente.html">Ofertas</a>
+                    </li>
+                    <li class="navegador__item">
+                        <a class="navegador__menu menu__sub" href="html/pendiente.html">Viajes temáticos</a>
+                    </li>
+                    <li class="navegador__item">
+                        <a class="navegador__menu menu__sub" href="html/pendiente.html">Para grupos</a>
+                    </li>
+                    <li class="navegador__item">
+                        <a class="navegador__menu menu__sub" href="html/pendiente.html">Contacto</a>
+                    </li>
+                    <li class="navegador__item">
+                        <button class="navegador__menu boton-menu">Iniciar sesión</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="registrar-principal">
+
+            <h2 class="registrar-principal__title">Crea tu cuenta</h2>
+            <h4 class="registrar-principal__subtitle">Estás a punto de empezar a disfrutar del mejor entretenimiento con
+                HBO
+                Max</h4>
+
+            <form action="#" class="registrar__formulario">
+                <div class="registrar__id">
+                    <div class="registrar__id-conteiner">
+                        <label>Nombre</label>
+                        <input type="text" class="registrar__id-input registrar__id-nombre">
+                    </div>
+                    <div class="registrar__id-conteiner">
+                        <label>Apellidos</label>
+                        <input type="text" class="registrar__id-input registrar__id-apellidos">
+                    </div>
+                </div>
+                <div class="registrar__correo">
+                    <label>Correo electrónico</label>
+                    <input type="email" class="registrar__id-input registrar__id-correo">
+                </div>
+                <div class="registrar__correo">
+                    <label>Confirma el correo</label>
+                    <input type="email" class="registrar__id-input registrar__id-correo2">
+                </div>
+                <div class="registrar__correo">
+                    <label>Contraseña</label>
+                    <input type="text" class="registrar__id-input registrar__id-contra">
+                </div>
+                <div class="registrar__correo">
+                    <label>Confirma la contraseña</label>
+                    <input type="text" class="registrar__id-input registrar__id-contra2">
+                </div>
+                <div class="registrar__terminos">
+                    <input type="checkbox" class="registrar__terminos-input">
+                    <label>Utilizar mi dirección de correo electrónico para enviarme promociones de marketing y ofertas
+                        de Viajes Marín S.L. y de sus afiliadas a través de correo electrónico, redes sociales y otros
+                        canales.</label>
+                </div>
+                <div class="registrar__terminos">
+                    <input type="checkbox" class="registrar__terminos-input" required>
+                    <label>Al hacer clic en "CREAR CUENTA", usted confirma que es mayor de 18 años, acepta las
+                        Condiciones de Uso y confirma haber leído nuestra Política de Privacidad.</label>
+                </div>
+                <div class="registrar__btn-conteiner">
+                <button class="registrar__btn" type="button">CREAR CUENTA</button>
+            </div>
+            </form>
+        </main>
+    </div>
+    <script src="../scripts/registrar.js"></script>
+    <script type="module" src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/modal.js"></script>
+</body>
+</html>
