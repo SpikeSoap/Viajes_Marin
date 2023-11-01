@@ -1,14 +1,6 @@
 window.addEventListener('load', () => {
     
-    /*Controlo el usuario*/
-    // var usuario = sessionStorage.getItem('Usuario');
-    // if (usuario.trim().length != "") {
-    //     document.getElementById('btn-modal').innerHTML = usuario;
-    // }
-    // else{
-    //     document.getElementById('btn-modal').innerHTML = "Iniciar Sesión";
-    // }
-
+    
     /*Recojo los valores de la sesión*/
     let destino = localStorage.getItem('Destino');
     let fechaD = localStorage.getItem('Fecha desde');

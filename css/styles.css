@@ -424,8 +424,9 @@
 }
 
 .container-reserva {
-  height: 100vh;
-  background-color: rgb(45, 114, 45);
+  height: 110vh;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(45, 114, 45) 100%);
 }
 
 .encabezado-reserva {
@@ -435,7 +436,6 @@
 .principal-reserva__title {
   text-align: center;
   font-size: 2vw;
-  border: 2px solid red;
 }
 .principal-reserva__conteiner {
   display: flex;
@@ -446,14 +446,23 @@
   margin-inline-start: 3%;
   margin-block-start: 3%;
   width: 55%;
-  height: 30vh;
+  height: 35vh;
   background: #ffffff;
   border-radius: 15px;
   padding: 3%;
+  padding-block-start: 2%;
 }
 .reserva-izquierda__conteiner {
   height: 30vh;
   text-align: center;
+}
+.reserva-izquierda__subtitle {
+  height: 6vh;
+  font-size: 1.5vw;
+  display: flex;
+  flex-flow: row;
+  align-items: top;
+  justify-content: center;
 }
 .reserva-izquierda__formulario {
   display: flex;
@@ -507,21 +516,31 @@
   padding-block-start: 4%;
 }
 
+.reserva-section {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .reserva-pagar {
-  width: 28%;
+  width: 25%;
   height: 10vh;
-  margin-inline-start: 15%;
+  margin-inline: 15%;
   margin-block-start: -5%;
   display: flex;
+  flex-flow: row;
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 10%;
-  top: 90vh;
+  top: 100%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 .reserva-pagar:active {
-  height: 10%;
-  position: absolute;
+  top: 99%;
 }
 .reserva-pagar__boton {
   width: 100%;
@@ -536,12 +555,12 @@
 .reserva-pagar__boton:hover {
   cursor: pointer;
 }
-.reserva-pagar__continuar {
+.reserva-pagar__boton span {
+  position: relative;
   z-index: 2;
   transition: 0.3s ease all;
-  position: relative;
 }
-.reserva-pagar__transition {
+.reserva-pagar__boton svg {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -549,7 +568,7 @@
   left: 0;
   fill: none;
 }
-.reserva-pagar__transition rect {
+.reserva-pagar__boton rect {
   width: 100%;
   height: 100%;
   stroke: #ffffff;
@@ -558,7 +577,7 @@
   stroke-dashoffset: 1000;
   transition: 0.6s ease all;
 }
-.reserva-pagar__transition:hover rect {
+.reserva-pagar__boton:hover rect {
   stroke-dashoffset: 0;
 }
 
