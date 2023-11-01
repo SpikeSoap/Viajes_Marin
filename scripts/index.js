@@ -4,8 +4,21 @@ import { crearModal } from "./modal.js";
 const btnIniciar = document.querySelector(".contenido-index__boton");
 const btnMenu = document.querySelector(".boton-menu");
 const logo = document.querySelector(".encabezado__logo");
+const destMenu = document.querySelectorAll(".menu__sub");
 
 
+// for (let i = 0; i < destMenu.length; i++) {
+
+//     destMenu[i].addEventListener('click', () => {
+//         window.location.href = "../pages/borrar.html";
+//     });
+// };
+
+// destMenu.forEach(pendiente => {
+//     pendiente.addEventListener('click', () => {
+//         window.location.href = "../pages/borrar.html";
+//     });
+// })
 
 if (btnIniciar) {
     btnIniciar.addEventListener('click', () => {
@@ -51,15 +64,15 @@ function btnLogin() {
     btnIniSes.addEventListener('click', () => {
         let correoAct = correoUsu.value;
         let contraAct = contraUsu.value;
-        
+
         if (correoAct && contraUsu) {
             if ((correoAct.trim().length != "") && (contraAct.trim().length != "")) {
                 let correo = localStorage.getItem('Correo');
                 let contra = localStorage.getItem('Contra');
-    
+
                 if ((correo != null) && (contra != null)) {
                     let nombre = localStorage.getItem('Nombre');
-                    
+
                     if ((correo == correoAct) && (contra == contraAct)) {
                         btnMenu.innerHTML = nombre;
                         btnMenu.classList.add('boton__usuario');

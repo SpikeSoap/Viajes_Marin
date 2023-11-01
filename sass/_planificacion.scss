@@ -41,23 +41,23 @@
 
     &__formulario {
         height: 10vh;
-        @include mixinsfunc.crear-flexbox(row,center, center);        
+        @include mixinsfunc.crear-flexbox(row, center, center);
     }
 
     &__contenedor {
         width: 15%;
         height: 100%;
-        @include mixinsfunc.crear-flexbox(column,center, center);
+        @include mixinsfunc.crear-flexbox(column, center, center);
         gap: 5%;
         font-size: 1.2vw;
         background-color: white;
         border: 1px solid rgba(207, 206, 206, 0.705);
 
-        &-primero{
+        &-primero {
             border-radius: 15px 0px 0px 15px;
         }
 
-        &-ultimo{
+        &-ultimo {
             border-radius: 0px 15px 15px 0px;
         }
     }
@@ -82,15 +82,15 @@
         font-weight: 300;
     }
 
-    &__botonera{
+    &__botonera {
         width: 100%;
         height: 15vh;
-        
-        @include mixinsfunc.crear-flexbox(row,space-around, center);
-        color: white;   
+
+        @include mixinsfunc.crear-flexbox(row, space-around, center);
+        color: white;
     }
 
-    &__btn{
+    &__btn {
         width: 15%;
         text-align: center;
         border: 3px solid rgb(45, 114, 45);
@@ -98,10 +98,10 @@
         padding-inline: 2%;
         border-radius: 20px;
         font-size: 1.4vw;
-    
-        &:hover{
+
+        &:hover {
             border: 3px solid rgb(40, 100, 40);
-            background-color: rgb(40, 100, 40); 
+            background-color: rgb(40, 100, 40);
         }
     }
 }
@@ -109,7 +109,7 @@
 .encabezado-arrow {
     width: 100%;
     height: 70vh;
-    @include mixinsfunc.crear-flexbox(row,space-between, center);
+    @include mixinsfunc.crear-flexbox(row, space-between, center);
 
     &__img {
         width: 8%;
@@ -121,8 +121,9 @@
 .principal-planificacion {
     width: 100%;
     height: 110vh;
-    background-color: rgb(45, 114, 45);
-    // border: 2px solid rgb(55, 0, 255);
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 114, 45, 1) 100%);
+    
 
     &__title {
         text-align: center;
@@ -131,7 +132,6 @@
         font-size: 6vh;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
-        // border: 2px solid red;
     }
 
     &__conteiner {

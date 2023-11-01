@@ -4,6 +4,7 @@ const arrowLeft = document.querySelector(".encabezado-arrow__left");
 const arrowRight = document.querySelector(".encabezado-arrow__right");
 const image = document.querySelector(".encabezado-planificacion");
 const btnBuscar = document.querySelector(".encabezado-buscador__buscar");
+const viajeExtras = document.querySelectorAll(".encabezado-buscador__btn");
 
 let origen = document.querySelector(".encabezado-buscador__input-origen");
 let destino = document.querySelector(".encabezado-buscador__input-dest");
@@ -37,10 +38,16 @@ arrowLeft.addEventListener('click', () => {
     }
 });
 
-
 viajeImg.forEach(image => {
     image.addEventListener('click', () => {
-        window.location.href = "pendiente.html";
+        window.location.href = "../pages/pendiente.html";
+    });
+})
+
+
+viajeExtras.forEach(extras => {
+    extras.addEventListener('click', () => {
+        window.location.href = "../pages/pendiente.html";
     });
 })
 
@@ -59,7 +66,7 @@ btnBuscar.addEventListener('click', () => {
         localStorage.setItem('Adultos', adultAct);
 
         if (fechaDAct < fechaHAct) {
-            location.href = 'reserva.html';
+            location.href = '../pages/reserva.html';
         } else {
             alert("Las fechas están mal introducidas");
         }
