@@ -2,11 +2,11 @@ window.addEventListener('load', () => {
     
     
     /*Recojo los valores de la sesión*/
-    let destino = localStorage.getItem('Destino');
-    let fechaD = localStorage.getItem('Fecha desde');
-    let fechaH = localStorage.getItem('Fecha hasta');
-    let adult = localStorage.getItem('Adultos');
-    let kid = localStorage.getItem('Niños');
+    let destino = sessionStorage.getItem('Destino');
+    let fechaD = sessionStorage.getItem('Fecha desde');
+    let fechaH = sessionStorage.getItem('Fecha hasta');
+    let adult = sessionStorage.getItem('Adultos');
+    let kid = sessionStorage.getItem('Niños');
 
     /*Opero con las fechas*/
     let d1 = new Date(fechaD);

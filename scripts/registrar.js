@@ -23,15 +23,18 @@ btnRegis.addEventListener("click", () => {
     if ((nombreAct.trim().length != "") && (apellidosAct.trim().length != "") && (correoAct.trim().length != "") && (correo2Act.trim().length != "") && (contraAct.trim().length != "") && (contra2Act.trim().length != "")) {
 
         if ((correoAct == correo2Act) && (contraAct == contra2Act)) {
-            localStorage.setItem('Nombre', nombreAct);
-            localStorage.setItem('Apellidos', apellidosAct);
-            localStorage.setItem('Correo', correoAct);
-            localStorage.setItem('Contra', contraAct);
+            sessionStorage.setItem('Nombre', nombreAct);
+            sessionStorage.setItem('Apellidos', apellidosAct);
+            sessionStorage.setItem('Correo', correoAct);
+            sessionStorage.setItem('Contra', contraAct);
+
+            sessionStorage.setItem('Usuario', nombreAct);
+
+            alert("Se ha registrado con éxito");
+            window.location.href = ("../index.html");
         } else {
             alert("El usuario o contraseña introducidos no coinciden, revíselo");
         }
-
-        window.location.href = ("../index.html");
     } else {
         alert("No has rellenado todos los campos correctamente");
     }

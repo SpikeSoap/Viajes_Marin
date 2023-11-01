@@ -60,10 +60,10 @@ btnBuscar.addEventListener('click', () => {
     let adultAct = adult.value;
 
     if ((origenAct.trim().length != "") && (destinoAct.trim().length != "") && (fechaDAct.trim().length != "") && (fechaHAct.trim().length != "") && (adultAct.trim().length != "")) {
-        localStorage.setItem('Destino', destinoAct);
-        localStorage.setItem('Fecha desde', fechaDAct);
-        localStorage.setItem('Fecha hasta', fechaHAct);
-        localStorage.setItem('Adultos', adultAct);
+        sessionStorage.setItem('Destino', destinoAct);
+        sessionStorage.setItem('Fecha desde', fechaDAct);
+        sessionStorage.setItem('Fecha hasta', fechaHAct);
+        sessionStorage.setItem('Adultos', adultAct);
 
         if (fechaDAct < fechaHAct) {
             location.href = '../pages/reserva.html';

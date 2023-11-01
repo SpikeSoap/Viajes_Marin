@@ -6,6 +6,9 @@ const btnMenu = document.querySelector(".boton-menu");
 const logo = document.querySelector(".encabezado__logo");
 const destMenu = document.querySelectorAll(".menu__sub");
 
+//
+// Descubrir por qué va mal la ruta: el navegador se inventa una carpeta html que no tengo programado por ninguna parte
+//
 
 // for (let i = 0; i < destMenu.length; i++) {
 
@@ -49,7 +52,7 @@ function btnClose() {
 
     if (btnClose) {
         btnClose.addEventListener('click', () => {
-            modalCont.classList.remove('show');
+            // modalCont.classList.remove('show');
             modalCont.remove();
         });
     }
@@ -60,33 +63,34 @@ function btnLogin() {
     let correoUsu = document.querySelector(".form-modal__correo");
     let contraUsu = document.querySelector(".form-modal__contra");
     let btnIniSes = document.querySelector(".form-modal__inicioS");
+    let modalCont = document.querySelector(".container__modal");
 
     btnIniSes.addEventListener('click', () => {
         let correoAct = correoUsu.value;
         let contraAct = contraUsu.value;
 
         if (correoAct && contraUsu) {
-            if ((correoAct.trim().length != "") && (contraAct.trim().length != "")) {
-                let correo = localStorage.getItem('Correo');
-                let contra = localStorage.getItem('Contra');
+                let correo = sessionStorage.getItem('Correo');
+                let contra = sessionStorage.getItem('Contra');
 
                 if ((correo != null) && (contra != null)) {
-                    let nombre = localStorage.getItem('Nombre');
+                    let nombre = sessionStorage.getItem('Nombre');
 
                     if ((correo == correoAct) && (contra == contraAct)) {
                         btnMenu.innerHTML = nombre;
                         btnMenu.classList.add('boton__usuario');
 
-                        localStorage.setItem('Usuario', nombre);
+                        sessionStorage.setItem('Usuario', nombre);
+
+                        modalCont.remove();
                     } else {
-                        console.log("El usuario o la contraseña no coinciden");
+                        alert("El usuario o la contraseña no coinciden");
                     }
                 } else {
                     alert("No hay ningún usuario registrado");
                 }
-            } else {
-                alert("Llene por favor, los campos");
-            }
+        } else {
+            alert("Llene por favor, los campos");
         }
     });
 }
@@ -112,7 +116,7 @@ function btnRegistrar() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    let usuario = localStorage.getItem('Usuario');
+    let usuario = sessionStorage.getItem('Usuario');
     if (usuario != null) {
         btnMenu.innerHTML = usuario;
         btnMenu.classList.add('boton__usuario');
