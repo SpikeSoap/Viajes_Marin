@@ -51,11 +51,11 @@ function btnLogin() {
     btnIniSes.addEventListener('click', () => {
         let correoAct = correoUsu.value;
         let contraAct = contraUsu.value;
+        
         if (correoAct && contraUsu) {
             if ((correoAct.trim().length != "") && (contraAct.trim().length != "")) {
                 let correo = localStorage.getItem('Correo');
                 let contra = localStorage.getItem('Contra');
-                console.log(correo + " " + correoAct);
     
                 if ((correo != null) && (contra != null)) {
                     let nombre = localStorage.getItem('Nombre');
@@ -69,7 +69,7 @@ function btnLogin() {
                         console.log("El usuario o la contraseña no coinciden");
                     }
                 } else {
-                    alert("No hay ningún usuario introducido");
+                    alert("No hay ningún usuario registrado");
                 }
             } else {
                 alert("Llene por favor, los campos");
